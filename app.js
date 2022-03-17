@@ -53,8 +53,9 @@ addMushroomButton.addEventListener('click', () => {
 });
 
 function displayFriends() {
+    friendsEl.textContent = '';
     for (let friend of friendData) {
-        const friendEl = renderFriend(friendData);
+        const friendEl = renderFriend(friend);
 
         friendEl.addEventListener('click', () => {
             const friendInState = findFriendByName(friend.name, friendData);
@@ -66,7 +67,7 @@ function displayFriends() {
                 friendInState.happiness++;
                 mushroomCount++;
         
-                displayFriends(friendData);
+                displayFriends();
                 displayMushrooms();    
             }
         });
