@@ -45,8 +45,7 @@ addFriendButton.addEventListener('click', () => {
 addMushroomButton.addEventListener('click', () => {
     if (Math.random() > .5) {
         alert('found a mushroom!');
-
-        mushroomCount;
+        mushroomCount++;
         displayMushrooms();
     } else {
         alert('no luck!');
