@@ -1,4 +1,4 @@
-export function addFriend(name, friendData) {
+export function addFriend(name,friendData) {
     const newFriend = {
         name: name || `Friend #${Math.floor(Math.random() * 1000)}`,
         satisfaction: 1
@@ -7,9 +7,9 @@ export function addFriend(name, friendData) {
     friendData.push(newFriend);
 }
 
-export function findFriendByName(name, friends) {
-    for (friend of friends) {
-        if (friend.name = name) {
+export function findFriendByName(name, friendData) {
+    for (let friend of friendData) {
+        if (friend.name === name) {
             return friend;
         }
     }

@@ -56,22 +56,18 @@ function displayFriends() {
     friendsEl.textContent = '';
     for (let friend of friendData) {
         const friendEl = renderFriend(friend);
-
         friendEl.addEventListener('click', () => {
             const friendInState = findFriendByName(friend.name, friendData);
-    
             if (mushroomCount === 0) {
                 alert('no mushrooms left! go forage for some more');
             }
             if (mushroomCount > 0 && friendInState.satisfaction < 3) {
-                friendInState.happiness++;
-                mushroomCount++;
-        
+                friendInState.satisfaction++;
+                mushroomCount--;
                 displayFriends();
                 displayMushrooms();    
             }
         });
-
         friendsEl.append(friendEl);
     }
 }
