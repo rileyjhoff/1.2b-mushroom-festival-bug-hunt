@@ -38,7 +38,7 @@ addFriendButton.addEventListener('click', () => {
 
     friendInputEl.value = '';
 
-    displayFriends(friendData);
+    displayFriends();
 });
 
 
