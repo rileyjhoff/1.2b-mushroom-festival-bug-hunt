@@ -6,6 +6,7 @@ const friendsEl = document.querySelector('.friends');
 const mushroomsEl = document.querySelector('.mushrooms');
 const addMushroomButton = document.getElementById('add-mushroom-button');
 const addFriendButton = document.getElementById('add-friend-button');
+const friendInputEl = document.getElementById('friend-input');
 
 // initialize state
 
@@ -31,7 +32,7 @@ const friendData = [
 ];
 
 addFriendButton.addEventListener('click', () => {
-    const name = friendInputEl;
+    const name = friendInputEl.value;
 
     addFriend(name, friendData);
 
